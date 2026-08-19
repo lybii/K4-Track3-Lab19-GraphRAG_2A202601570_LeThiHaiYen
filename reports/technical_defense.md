@@ -1,6 +1,7 @@
 # Thuyết minh kỹ thuật — Lab 19 GraphRAG vs Flat RAG
 
 **Học viên:** Lê Thị Hải Yến  
+**MSV:** 2A202601570  
 **Ngày thực hiện:** 19/08/2026
 
 ## 1. Vì sao dùng conservative coreference?

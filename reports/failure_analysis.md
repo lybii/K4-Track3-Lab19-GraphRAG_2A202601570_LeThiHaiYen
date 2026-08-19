@@ -1,5 +1,7 @@
 # Phân tích ca lỗi — Flat RAG và GraphRAG
 
+**Học viên:** Lê Thị Hải Yến  
+**MSV:** 2A202601570  
 **Phạm vi:** 765 chunks, 42 graph nodes, 24 graph edges, 5 Golden queries.
 
 ## Ca lỗi 1 — Multi-hop retrieval thất bại

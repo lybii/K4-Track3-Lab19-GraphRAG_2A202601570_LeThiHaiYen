@@ -22,7 +22,7 @@ Mọi edge có `source_chunk_id`, `published_date`, `evidence`, `confidence`. Sa
 
 ## 5. Chính sách Super-node
 
-Nếu degree lớn hơn 100, traversal chỉ lấy tối đa 50 cạnh mới nhất. Toàn request có `GLOBAL_EDGE_CAP=250` và `MAX_GRAPH_CONTEXT_CHARS=14000`. Subset hiện tại chưa có super-node thật; ba node cao nhất đều degree 3. Chính sách được test cả nhánh dữ liệu thật và invariant cap.
+Nếu degree lớn hơn 100, traversal chỉ lấy tối đa 50 cạnh mới nhất. Toàn request có `GLOBAL_EDGE_CAP=250` và `MAX_GRAPH_CONTEXT_CHARS=14000`. Subset hiện tại chưa có super-node thật; ba node cao nhất đều degree 3. Notebook bổ sung unit test mô phỏng degree 101 và 10.000: edge budget bằng 50, global cap bằng 250 và context cap bằng 14.000 ký tự.
 
 ## 6. Vì sao ưu tiên cạnh mới nhất có rủi ro?
 

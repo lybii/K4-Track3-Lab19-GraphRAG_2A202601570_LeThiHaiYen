@@ -29,7 +29,7 @@ Trong subset này không có cặp khác nhau đạt cosine trên `0.85`; vì v�
 | 2 | Samsung Electronics Co. Ltd. | Company | 3 |
 | 3 | Walt Disney Co. | Company | 3 |
 
-Subset 40 extraction chunks chưa sinh node có degree lớn hơn 100, nên test thực tế chọn node cao nhất và lấy đúng 3/3 cạnh. Chính sách vẫn được cài đặt: `degree > 100` thì lấy tối đa 50 cạnh mới nhất; toàn context tối đa 250 cạnh và 14.000 ký tự.
+Subset 40 extraction chunks chưa sinh node có degree lớn hơn 100, nên test dữ liệu thật chọn node cao nhất và lấy đúng 3/3 cạnh. Để bao phủ nhánh super-node mà không chèn cạnh giả vào Neo4j, notebook có unit test mô phỏng degree 101 và 10.000; cả hai đều trả edge budget 50. Test cũng xác nhận global cap 250 và context cap 14.000 ký tự.
 
 Ưu điểm của ưu tiên cạnh mới nhất là kiểm soát context explosion và phù hợp câu hỏi tin tức hiện hành. Rủi ro là câu hỏi lịch sử có thể mất cạnh cũ quan trọng. Production nên kết hợp temporal filter theo intent câu hỏi, relation-aware sampling và quota theo loại cạnh thay vì chỉ sort ngày toàn cục.
 

@@ -96,6 +96,11 @@ GraphRAG phù hợp khi người dùng hỏi chuỗi đầu tư–mua lại–ph
 
 ## TỰ ĐÁNH GIÁ
 
+### Bonus đã thực hiện
+
+- **Global Search via Community Reports:** NetworkX phát hiện 18 communities và gán `community_id` cho đủ 42 nodes. `outputs/community_reports.csv` chứa summary từng cộng đồng; global query đã ưu tiên đúng cluster Tower Arch Capital → Intelligent Technical Solutions → các công ty được mua lại.
+- **Self-Correction Graph Retrieval:** demo trên G02 thử hop 2, mở rộng hop 3 rồi dùng vector fallback. Route cuối là `hop3+vector`, context dài 2.299 ký tự; kết quả được lưu tại `outputs/self_correction_demo.json`.
+
 | Tiêu chí | Điểm (1–5) | Ghi chú |
 |---|---:|---|
 | Hiểu GraphRAG | 4 | Hiểu đầy đủ extraction, resolution, traversal và failure modes |
